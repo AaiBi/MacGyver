@@ -1,0 +1,1 @@
+"""Constants of the maze game"""
