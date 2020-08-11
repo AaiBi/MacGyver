@@ -1,0 +1,1 @@
+"""Class of the maze game"""
