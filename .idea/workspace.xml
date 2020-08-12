@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="551cad7a-3263-430d-96e6-9ffc58957106" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes_maze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/maze.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Dk_Labyrinthe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -96,7 +97,8 @@
       <workItem from="1596431445330" duration="11367000" />
       <workItem from="1596591454321" duration="7274000" />
       <workItem from="1597112624584" duration="534000" />
-      <workItem from="1597199520212" duration="207000" />
+      <workItem from="1597199520212" duration="1565000" />
+      <workItem from="1597202807043" duration="814000" />
     </task>
     <servers />
   </component>
@@ -120,10 +122,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596559082137" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1596590762404">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1597204152523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596590762404" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597204152523" />
     <state width="1286" height="163" key="GridCell.Tab.0.bottom" timestamp="1596590765637">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
