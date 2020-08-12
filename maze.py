@@ -75,3 +75,42 @@ while repeat:
 
 		# Creation of the game
 		mg = Person(image_mac, image_mac, image_mac, image_mac, start)  # mg = MacGyver
+
+	# Game loop
+	while repeat_game:
+
+			# Loop speed limitation
+			pygame.time.Clock().tick(30)
+
+			for event in pygame.event.get():
+
+				# If the user quits, we set the variable that continues the game
+				# ET the general variable to 0 to close the window
+				if event.type == QUIT:
+					repeat_game = 0
+					repeat = 0
+
+				elif event.type == KEYDOWN:
+					# If the user presses Esc here, we only return to the menu
+					if event.key == K_ESCAPE:
+						repeat_game = 0
+
+					# MacGyver navigation keys
+					elif event.key == K_RIGHT:
+						mg.move('right')
+					elif event.key == K_LEFT:
+						mg.move('left')
+					elif event.key == K_UP:
+						mg.move('top')
+					elif event.key == K_DOWN:
+						mg.move('bottom')
+
+			# Displays at new positions
+			window.blit(fond, (0, 0))
+			start.show(window)
+			window.blit(mg.direction, (mg.x, mg.y))  # direction
+			pygame.display.flip()
+
+			# Victoire -> Retour à l'accueil
+			if start.structure[mg.box_y][mg.box_x] == 'a':
+				repeat_game = 0
