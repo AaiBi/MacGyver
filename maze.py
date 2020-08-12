@@ -27,4 +27,16 @@ pygame.display.set_icon(icon)
 #Title
 pygame.display.set_caption(window_title)
 
+# Main loop
+repeat = 1
+while repeat:
+	# Loading and viewing the home screen
+	home = pygame.image.load(home_image).convert()
+	window.blit(home, (0, 0))
 
+	# Refreshment
+	pygame.display.flip()
+
+	# We reset these variables to 1 at each loop round
+	repeat_game = 1
+	repeat_home = 1
