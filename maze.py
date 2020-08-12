@@ -21,9 +21,6 @@ pygame.init()
 
 #Opening the Pygame window (square: width = height)
 window = pygame.display.set_mode((window_side, window_side))
-#Icon
-icon = pygame.image.load(icon_image)
-pygame.display.set_icon(icon)
 #Title
 pygame.display.set_caption(window_title)
 
