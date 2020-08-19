@@ -3,7 +3,7 @@
 import pygame
 from pygame.locals import *
 from constants_maze import *
-
+import random
 
 class Start:
     """Class used to create the start of the game"""
@@ -57,6 +57,21 @@ class Start:
                     window.blit(arrived, (x, y))
                 num_case += 1
             number_line += 1
+
+    def pos_items(self):
+        """define 3 random positions for items"""
+        self.items_poss = []
+        "Create an empty list"
+        for x, col in enumerate(self.structure):
+            for y, case in enumerate(col):
+                if case == '0':
+                    position_items = (x, y)
+                    self.items_poss.append(position_items)
+                    "Create a list of possible positions"
+                    self.pos_items = random.sample(self.items_poss, 3)
+                    self.pos_items = random.sample(self.items_poss, 3)
+                    self.pos_items = random.sample(self.items_poss, 3)
+                    "Choos 3 random positon in the list"
 
 
 class Person:
