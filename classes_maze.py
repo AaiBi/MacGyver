@@ -32,6 +32,27 @@ class Start:
             # We save this structure
             self.structure = structure_level
 
+        number_line = 0
+        for line in self.structure:
+                # On parcourt les listes de lignes
+                num_case = 0
+                for sprite in line:
+                    # We calculate the real position in pixels
+                    x = num_case * sprite_size
+                    y = number_line * sprite_size
+                    if sprite == '0':  # 0 = space empty
+                        table = [x, y]
+                        sampling = random.choices(table, k=3)  # k = number of choice of variables
+
+                    num_case += 1
+                number_line += 1
+
+        for value in sampling:
+            sprite = 's'
+            print(sampling)
+            print(sprite)
+
+
     def show(self, window):
         """Méthode permettant d'afficher le niveau en fonction
         de la liste de structure renvoyée par generer()"""
@@ -39,6 +60,7 @@ class Start:
         wall = pygame.image.load(wall_image).convert()
         departure = pygame.image.load(departure_image).convert_alpha()
         arrived = pygame.image.load(Gardien_image).convert_alpha()
+        syringe = pygame.image.load(syringe_image).convert_alpha()
 
         # We go through the list of the level
         number_line = 0
@@ -51,27 +73,15 @@ class Start:
                 y = number_line * sprite_size
                 if sprite == 'w':  # w = Wall
                     window.blit(wall, (x, y))
-                elif sprite == 'd':  # d = Départ
+                elif sprite == 'd':  # d = Départure
                     window.blit(departure, (x, y))
-                elif sprite == 'a':  # a = Arrivée
+                elif sprite == 'a':  # a = Arrived
                     window.blit(arrived, (x, y))
+                elif sprite == 's':  # s = syringe
+                    window.blit(syringe, (x, y))
+
                 num_case += 1
             number_line += 1
-
-    def pos_items(self):
-        """define 3 random positions for items"""
-        self.items_poss = []
-        "Create an empty list"
-        for x, col in enumerate(self.structure):
-            for y, case in enumerate(col):
-                if case == '0':
-                    position_items = (x, y)
-                    self.items_poss.append(position_items)
-                    "Create a list of possible positions"
-                    self.pos_items = random.sample(self.items_poss, 3)
-                    self.pos_items = random.sample(self.items_poss, 3)
-                    self.pos_items = random.sample(self.items_poss, 3)
-                    "Choos 3 random positon in the list"
 
 
 class Person:
