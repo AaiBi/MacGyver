@@ -5,6 +5,7 @@ from pygame.locals import *
 from constants_maze import *
 import random
 
+
 class Start:
     """Class used to create the start of the game"""
 
@@ -29,29 +30,31 @@ class Start:
                         line_level.append(sprite)
                 # Add the line to the level list
                 structure_level.append(line_level)
+
+                # We go through the list of the level
+                number_line = 0
+                table_0 = []
+                for line in structure_level:
+                    # On parcourt les listes de lignes
+                    num_case = 0
+                    for sprite in line:
+                        # We calculate the real position in pixels
+                        x = num_case * sprite_size
+                        y = number_line * sprite_size
+                        if sprite == '0':  # 0 = empty space
+                            table_0.append([x,y])
+
+                            sampling = random.choices(table_0, k=3)
+                            for value in sampling:
+                                sprite = 's'
+
+                        num_case += 1
+                    number_line += 1
+            print(table_0)
+
+            print(sampling)
             # We save this structure
             self.structure = structure_level
-
-        number_line = 0
-        for line in self.structure:
-                # On parcourt les listes de lignes
-                num_case = 0
-                for sprite in line:
-                    # We calculate the real position in pixels
-                    x = num_case * sprite_size
-                    y = number_line * sprite_size
-                    if sprite == '0':  # 0 = space empty
-                        table = [x, y]
-                        sampling = random.choices(table, k=3)  # k = number of choice of variables
-
-                    num_case += 1
-                number_line += 1
-
-        for value in sampling:
-            sprite = 's'
-            print(sampling)
-            print(sprite)
-
 
     def show(self, window):
         """Méthode permettant d'afficher le niveau en fonction
