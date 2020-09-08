@@ -22,6 +22,9 @@
     <list default="true" id="551cad7a-3263-430d-96e6-9ffc58957106" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes_maze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants_maze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/maze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze_file" beforeDir="false" afterPath="$PROJECT_DIR$/maze_file" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +103,8 @@
       <workItem from="1597199520212" duration="1565000" />
       <workItem from="1597202807043" duration="6129000" />
       <workItem from="1597465225483" duration="9000" />
-      <workItem from="1597854648500" duration="26759000" />
+      <workItem from="1597854648500" duration="30975000" />
+      <workItem from="1599531668680" duration="14412000" />
     </task>
     <servers />
   </component>
@@ -120,6 +124,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="309" y="42" key="#Inspections" timestamp="1599538943138">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1599538943138" />
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596559082137">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -128,22 +136,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597204152523" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1598937169652">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1599549845768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598937169652" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1598937169651">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599549845768" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1599549845767">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598937169651" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1598937169651">
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599549845767" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1599549845767">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598937169651" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1598937169652">
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599549845767" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1599549845768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598937169652" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599549845768" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1596558571800">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -154,6 +162,6 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598416021647" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MacGyver$maze.coverage" NAME="maze Coverage Results" MODIFIED="1598937169640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MacGyver$maze.coverage" NAME="maze Coverage Results" MODIFIED="1599549845755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
