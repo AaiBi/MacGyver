@@ -23,6 +23,8 @@ pygame.init()
 window = pygame.display.set_mode((window_side, window_side))
 #Title
 pygame.display.set_caption(window_title)
+font = pygame.font.Font(None, 24)
+text = font.render("Biejdhsw	hkhwkjjwhkjkjdwkjjn ", 1, (255, 255, 255))
 
 # Main loop
 repeat = 1
@@ -30,6 +32,7 @@ while repeat:
 	# Loading and viewing the home screen
 	home = pygame.image.load(home_image).convert()
 	window.blit(home, (0, 0))
+	window.blit(text, (300, 300))
 
 	# Refreshment
 	pygame.display.flip()
@@ -37,6 +40,9 @@ while repeat:
 	# We reset these variables to 1 at each loop round
 	repeat_game = 1
 	repeat_home = 1
+
+	#Counter for the number of objects collected
+	counter = 0
 
 	# Home loop
 	while repeat_home:
@@ -108,6 +114,31 @@ while repeat:
 			window.blit(mg.direction, (mg.x, mg.y))  # direction
 			pygame.display.flip()
 
-			# Victoire -> Retour à l'accueil
-			if start.structure[mg.box_y][mg.box_x] == 'a':
+			#We collect the serynge
+			if start.structure[mg.box_y][mg.box_x] == 's':
+				start.structure[mg.box_y][mg.box_x] = '0'
+				counter += 1
+				print("Seringue ramassé !")
+			# We collect the plastic
+			if start.structure[mg.box_y][mg.box_x] == 'p':
+				start.structure[mg.box_y][mg.box_x] = '0'
+				counter += 1
+				print("Tube Plastique ramassé !")
+			# We collect the needle
+			if start.structure[mg.box_y][mg.box_x] == 'n':
+				start.structure[mg.box_y][mg.box_x] = '0'
+				counter += 1
+				print("Aiguille ramassée !")
+			# We collect the ether
+			if start.structure[mg.box_y][mg.box_x] == 'e':
+				start.structure[mg.box_y][mg.box_x] = '0'
+				counter += 1
+				print("Ether ramassé !")
+
+			if counter >= 4:
+				# Back to home page
+				if start.structure[mg.box_y][mg.box_x] == 'a':
+					repeat_game = 0
+			elif counter != 0 and counter < 4 and start.structure[mg.box_y][mg.box_x] == 'a':
+				print("GAME OVER !!!! Echec, mort de Mac Gyver")
 				repeat_game = 0
