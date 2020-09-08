@@ -30,31 +30,22 @@ class Start:
                         line_level.append(sprite)
                 # Add the line to the level list
                 structure_level.append(line_level)
-
-                # We go through the list of the level
-                number_line = 0
-                table_0 = []
-                for line in structure_level:
-                    # On parcourt les listes de lignes
-                    num_case = 0
-                    for sprite in line:
-                        # We calculate the real position in pixels
-                        x = num_case * sprite_size
-                        y = number_line * sprite_size
-                        if sprite == '0':  # 0 = empty space
-                            table_0.append([x,y])
-
-                            sampling = random.choices(table_0, k=3)
-                            for value in sampling:
-                                sprite = 's'
-
-                        num_case += 1
-                    number_line += 1
-            print(table_0)
-
-            print(sampling)
             # We save this structure
             self.structure = structure_level
+
+            #We all browse the file, we save the i and j position of the empty space (0)
+            pos_available = [(i, j) for j, line in enumerate(self.structure) for i, val in enumerate(line)
+                                     if val == '0']
+            random.shuffle(pos_available)
+            i, j = pos_available.pop()    #We pop from a random position for the serynge
+            self.structure[j][i] = 's'
+            i, j = pos_available.pop()    #We pop from a random position for the needle
+            self.structure[j][i] = 'n'
+            i, j = pos_available.pop()    #We pop from a random position for the ether
+            self.structure[j][i] = 'e'
+            i, j = pos_available.pop()    #We pop from a random position for the plastic
+            self.structure[j][i] = 'p'
+
 
     def show(self, window):
         """Méthode permettant d'afficher le niveau en fonction
@@ -64,6 +55,9 @@ class Start:
         departure = pygame.image.load(departure_image).convert_alpha()
         arrived = pygame.image.load(Gardien_image).convert_alpha()
         syringe = pygame.image.load(syringe_image).convert_alpha()
+        needle = pygame.image.load(needle_image).convert_alpha()
+        ether = pygame.image.load(ether_image).convert_alpha()
+        plastic = pygame.image.load(plastic_image).convert_alpha()
 
         # We go through the list of the level
         number_line = 0
@@ -82,6 +76,12 @@ class Start:
                     window.blit(arrived, (x, y))
                 elif sprite == 's':  # s = syringe
                     window.blit(syringe, (x, y))
+                elif sprite == 'n':  # n = needle
+                    window.blit(needle, (x, y))
+                elif sprite == 'e':  # e = ether
+                    window.blit(ether, (x, y))
+                elif sprite == 'p':  # p = plastic
+                    window.blit(plastic, (x, y))
 
                 num_case += 1
             number_line += 1
