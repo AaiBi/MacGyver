@@ -10,135 +10,138 @@ files : maze.py, classes_maze.py, constants_maze.py. README.md
 folder : ressource, .idea
 """
 
-import random
-import pygame
-from pygame.locals import *
+from pygame.locals import QUIT, KEYDOWN, K_F1, K_ESCAPE, K_RIGHT, K_LEFT, K_UP, K_DOWN
 
-from classes_maze import *
-from constants_maze import *
+from classes_maze import Start, Person, pygame
+from constants_maze import WINDOW_SIZE, WINDOW_TITLE, HOME_IMAGE, MACGYVER_IMAGE, BACKGROUND_IMAGE
+import time
 
 pygame.init()
 
-#Opening the Pygame window (square: width = height)
-window = pygame.display.set_mode((window_side, window_side))
-#Title
-pygame.display.set_caption(window_title)
-font = pygame.font.Font(None, 24)
-text = font.render("Biejdhsw	hkhwkjjwhkjkjdwkjjn ", 1, (255, 255, 255))
+# Opening the Pygame window (square: width = height)
+window = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
+# Title
+pygame.display.set_caption(WINDOW_TITLE)
 
-# Main loop
-repeat = 1
-while repeat:
-	# Loading and viewing the home screen
-	home = pygame.image.load(home_image).convert()
-	window.blit(home, (0, 0))
-	window.blit(text, (300, 300))
+# Font for the game over window
+font = pygame.font.SysFont("comicsansms", 13)
+font1 = pygame.font.SysFont("comicsansms", 40)
+# Text for the game over window
+text = font.render("GAME OVER ! Un ou des objet(s) n'a (n'ont) pas été ramassé(s)", True, (0, 128, 0))
+# Text for when you win the game
+text1 = font1.render("PARTIE REUSSIE !", True, (0, 128, 0))
 
-	# Refreshment
-	pygame.display.flip()
+def main():
+    """main function"""
+    # Main loop
+    repeat = 1
 
-	# We reset these variables to 1 at each loop round
-	repeat_game = 1
-	repeat_home = 1
+    while repeat:
+        # Loading and viewing the home screen
+        home = pygame.image.load(HOME_IMAGE).convert()
+        window.blit(home, (0, 0))
 
-	#Counter for the number of objects collected
-	counter = 0
+        # Refreshment
+        pygame.display.flip()
 
-	# Home loop
-	while repeat_home:
+        # We reset these variables to 1 at each loop round
+        repeat_game = 1
+        repeat_home = 1
 
-		# Loop speed limitation
-		pygame.time.Clock().tick(30)
+        # Home loop
+        while repeat_home:
 
-		for event in pygame.event.get():
+            # Loop speed limitation
+            pygame.time.Clock().tick(30)
 
-			# If the user quits, we put the variables loop to 0 to cycle through none and close
-			if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
-				repeat_home = 0
-				repeat_game = 0
-				repeat = 0
-				# Level choice variable
-				choice = 0
+            for event in pygame.event.get():
 
-			elif event.type == KEYDOWN:
-				# Launch of the game
-				if event.key == K_F1:
-					repeat_home = 0  # we leaves the home page
-					choice = 'maze_file'  # We launch the loading of maze_file which contains the labyrinth
+                # If the user quits, we put the variables loop to 0 to cycle through none and close
+                if event.type == QUIT or event.type == KEYDOWN and event.key == K_ESCAPE:
+                    repeat_home = 0
+                    repeat_game = 0
+                    repeat = 0
+                    # Level choice variable
+                    choice = 0
 
-	# We check that the player has clicked on F1 for not charge the file if he leaves
-	if choice != 0:
-		# launch of the background
-		fond = pygame.image.load(background_image).convert()
+                elif event.type == KEYDOWN:
+                    # Launch of the game
+                    if event.key == K_F1:
+                        repeat_home = 0  # we leaves the home page
+                        choice = 'maze_file'  # We launch the loading
+                        # of maze_file which contains the labyrinth
 
-		# Generation of the maze_file, file containing the labyrinth
-		start = Start(choice)
-		start.generer()
-		start.show(window)
+        # We check that the player has clicked on F1 for not charge the file if he leaves
+        if choice != 0:
+            # launch of the background
+            fond = pygame.image.load(BACKGROUND_IMAGE).convert()
 
-		# Creation of the game
-		mg = Person(image_mac, image_mac, image_mac, image_mac, start)  # mg = MacGyver
+            # Generation of the maze_file, file containing the labyrinth
+            start = Start(choice)
+            start.generate()
+            start.show(window)
 
-	# Game loop
-	while repeat_game:
+            # Creation of the game
+            mac = Person(MACGYVER_IMAGE, MACGYVER_IMAGE
+                         , MACGYVER_IMAGE, MACGYVER_IMAGE, start)  # mac = MacGyver
 
-			# Loop speed limitation
-			pygame.time.Clock().tick(30)
+        # Game loop
+        while repeat_game:
 
-			for event in pygame.event.get():
+            # Loop speed limitation
+            pygame.time.Clock().tick(30)
 
-				# If the user quits, we set the variable that continues the game
-				# ET the general variable to 0 to close the window
-				if event.type == QUIT:
-					repeat_game = 0
-					repeat = 0
+            for event in pygame.event.get():
 
-				elif event.type == KEYDOWN:
-					# If the user presses Esc here, we only return to the menu
-					if event.key == K_ESCAPE:
-						repeat_game = 0
+                # If the user quits, we set the variable that continues the game
+                # ET the general variable to 0 to close the window
+                if event.type == QUIT:
+                    repeat_game = 0
+                    repeat = 0
 
-					# MacGyver navigation keys
-					elif event.key == K_RIGHT:
-						mg.move('right')
-					elif event.key == K_LEFT:
-						mg.move('left')
-					elif event.key == K_UP:
-						mg.move('top')
-					elif event.key == K_DOWN:
-						mg.move('bottom')
+                elif event.type == KEYDOWN:
+                    # If the user presses Esc here, we only return to the menu
+                    if event.key == K_ESCAPE:
+                        repeat_game = 0
 
-			# Displays at new positions
-			window.blit(fond, (0, 0))
-			start.show(window)
-			window.blit(mg.direction, (mg.x, mg.y))  # direction
-			pygame.display.flip()
+                    # MacGyver navigation keys
+                    elif event.key == K_RIGHT:
+                        mac.move('right')
+                    elif event.key == K_LEFT:
+                        mac.move('left')
+                    elif event.key == K_UP:
+                        mac.move('top')
+                    elif event.key == K_DOWN:
+                        mac.move('bottom')
 
-			#We collect the serynge
-			if start.structure[mg.box_y][mg.box_x] == 's':
-				start.structure[mg.box_y][mg.box_x] = '0'
-				counter += 1
-				print("Seringue ramassé !")
-			# We collect the plastic
-			if start.structure[mg.box_y][mg.box_x] == 'p':
-				start.structure[mg.box_y][mg.box_x] = '0'
-				counter += 1
-				print("Tube Plastique ramassé !")
-			# We collect the needle
-			if start.structure[mg.box_y][mg.box_x] == 'n':
-				start.structure[mg.box_y][mg.box_x] = '0'
-				counter += 1
-				print("Aiguille ramassée !")
-			# We collect the ether
-			if start.structure[mg.box_y][mg.box_x] == 'e':
-				start.structure[mg.box_y][mg.box_x] = '0'
-				counter += 1
-				print("Ether ramassé !")
+            # Displays at new positions
+            window.blit(fond, (0, 0))
+            start.show(window)
+            window.blit(mac.direction, (mac.x, mac.y))  # direction
+            pygame.display.flip()
 
-			if counter >= 4:
-				# Back to home page
-				if start.structure[mg.box_y][mg.box_x] == 'a':
-					repeat_game = 0
-			elif counter != 0 and counter < 4 and start.structure[mg.box_y][mg.box_x] == 'a':
-				print("GAME OVER !!!! Echec, mort de Mac Gyver")
-				repeat_game = 0
+            if mac.counter >= 4:
+                # Back to home page
+                if start.structure[mac.box_y][mac.box_x] == 'a':
+                    # Window white
+                    window.fill((255, 255, 255))
+                    # Display the game over window
+                    window.blit(text1,
+                                (240 - text.get_width() // 2, 240 - text.get_height() // 2))
+                    pygame.display.flip()
+                    # 2 seconds of breaks before going to the home page
+                    time.sleep(2)
+                    repeat_game = 0
+            elif 0 <= mac.counter < 4 and start.structure[mac.box_y][mac.box_x] == 'a':
+                # Window white
+                window.fill((255, 255, 255))
+                # Display the game over window
+                window.blit(text,
+                            (240 - text.get_width() // 2, 240 - text.get_height() // 2))
+                pygame.display.flip()
+                # 2 seconds of breaks before going to the home page
+                time.sleep(3)
+                repeat_game = 0
+
+
+main()
