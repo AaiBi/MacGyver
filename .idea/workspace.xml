@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="551cad7a-3263-430d-96e6-9ffc58957106" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/MacGyver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MacGyver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes_maze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants_maze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/maze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maze_file" beforeDir="false" afterPath="$PROJECT_DIR$/maze_file" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,9 @@
   </component>
   <component name="JupyterTrust" id="61a331b2-bf5f-46eb-a917-d4b5e8f53b4d" />
   <component name="ProjectId" id="1fZhHskuhUXOa8wqh7ytevVQXQa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,7 +63,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="settings.editor.splitter.proportion" value="0.23649338" />
   </component>
   <component name="RunManager">
     <configuration name="maze" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -104,7 +110,7 @@
       <workItem from="1597202807043" duration="6129000" />
       <workItem from="1597465225483" duration="9000" />
       <workItem from="1597854648500" duration="30975000" />
-      <workItem from="1599531668680" duration="14412000" />
+      <workItem from="1599531668680" duration="49288000" />
     </task>
     <servers />
   </component>
@@ -132,36 +138,40 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596559082137" />
+    <state x="451" y="194" width="454" height="496" key="#com.intellij.tools.ToolEditorDialog" timestamp="1600197344082">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="451" y="194" width="454" height="496" key="#com.intellij.tools.ToolEditorDialog/0.0.1366.728@0.0.1366.728" timestamp="1600197344082" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1597204152523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597204152523" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1599549845768">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1600239730766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599549845768" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1599549845767">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600239730766" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1600239730766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599549845767" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1599549845767">
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1600239730766" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1600239730765">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599549845767" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1599549845768">
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1600239730765" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1600239730766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599549845768" />
-    <state x="184" y="9" key="SettingsEditor" timestamp="1596558571800">
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1600239730766" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1600197346009">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596558571800" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598416021647">
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1600197346009" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600213764082">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598416021647" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1600213764082" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MacGyver$maze.coverage" NAME="maze Coverage Results" MODIFIED="1599549845755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MacGyver$maze.coverage" NAME="maze Coverage Results" MODIFIED="1600239730755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
