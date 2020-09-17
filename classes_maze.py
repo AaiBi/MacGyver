@@ -2,6 +2,7 @@
 
 import random
 import pygame
+
 from constants_maze import WALL_IMAGE, DEPARTURE_IMAGE, GARDIAN_IMAGE, \
     ETHER_IMAGE, PLASTIC_IMAGE, SPRITE_SIZE, NUMBER_SPRITES_SIDE, SYRINGE_IMAGE, NEEDLE_IMAGE
 
@@ -107,6 +108,7 @@ class Person:
         # Start of the game
         self.start = start
         self.counter = 0
+
     def move(self, direction):
         """Method for moving the character"""
 
@@ -146,7 +148,6 @@ class Person:
                     self.box_y += 1
                     self.y = self.box_y * SPRITE_SIZE
             self.direction = self.bottom
-
 
         # We collect the serynge
         if self.start.structure[self.box_y][self.box_x] == 's':
