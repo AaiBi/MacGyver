@@ -18,21 +18,23 @@ import time
 
 pygame.init()
 
-# Opening the Pygame window (square: width = height)
-window = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
-# Title
-pygame.display.set_caption(WINDOW_TITLE)
 
-# Font for the game over window
-font = pygame.font.SysFont("comicsansms", 13)
-font1 = pygame.font.SysFont("comicsansms", 40)
-# Text for the game over window
-text = font.render("GAME OVER ! Un ou des objet(s) n'a (n'ont) pas été ramassé(s)", True, (0, 128, 0))
-# Text for when you win the game
-text1 = font1.render("PARTIE REUSSIE !", True, (0, 128, 0))
+class LaunchGame:
+    """Class used to launch the game"""
 
-def main():
-    """main function"""
+    # Opening the Pygame window (square: width = height)
+    window = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
+    # Title
+    pygame.display.set_caption(WINDOW_TITLE)
+
+    # Font for the game over window
+    font = pygame.font.SysFont("comicsansms", 13)
+    font1 = pygame.font.SysFont("comicsansms", 40)
+    # Text for the game over window
+    text = font.render("GAME OVER ! Un ou des objet(s) n'a (n'ont) pas été ramassé(s)", True, (0, 128, 0))
+    # Text for when you win the game
+    text1 = font1.render("PARTIE REUSSIE !", True, (0, 128, 0))
+
     # Main loop
     repeat = 1
 
@@ -144,4 +146,10 @@ def main():
                 repeat_game = 0
 
 
-main()
+def main():
+    """main function"""
+    lg = LaunchGame()
+
+
+if __name__ == "__main__":
+    main()
