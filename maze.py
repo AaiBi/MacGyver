@@ -16,11 +16,11 @@ from classes_maze import Start, Person, pygame
 from constants_maze import WINDOW_SIZE, WINDOW_TITLE, HOME_IMAGE, MACGYVER_IMAGE, BACKGROUND_IMAGE
 import time
 
-pygame.init()
-
 
 class LaunchGame:
     """Class used to launch the game"""
+
+    pygame.init()
 
     # Opening the Pygame window (square: width = height)
     window = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
