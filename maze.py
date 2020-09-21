@@ -10,11 +10,11 @@ files : maze.py, classes_maze.py, constants_maze.py. README.md
 folder : ressource, .idea
 """
 
+import time
 from pygame.locals import QUIT, KEYDOWN, K_F1, K_ESCAPE, K_RIGHT, K_LEFT, K_UP, K_DOWN
 
 from classes_maze import Start, Person, pygame
 from constants_maze import WINDOW_SIZE, WINDOW_TITLE, HOME_IMAGE, MACGYVER_IMAGE, BACKGROUND_IMAGE
-import time
 
 
 class LaunchGame:
@@ -31,7 +31,8 @@ class LaunchGame:
     font = pygame.font.SysFont("comicsansms", 13)
     font1 = pygame.font.SysFont("comicsansms", 40)
     # Text for the game over window
-    text = font.render("GAME OVER ! Un ou des objet(s) n'a (n'ont) pas été ramassé(s)", True, (0, 128, 0))
+    text = font.render("GAME OVER ! Un ou des objet(s) n'a (n'ont) pas été ramassé(s)"
+                       , True, (0, 128, 0))
     # Text for when you win the game
     text1 = font1.render("PARTIE REUSSIE !", True, (0, 128, 0))
 
@@ -148,7 +149,7 @@ class LaunchGame:
 
 def main():
     """main function"""
-    lg = LaunchGame()
+    launch_g = LaunchGame()
 
 
 if __name__ == "__main__":
