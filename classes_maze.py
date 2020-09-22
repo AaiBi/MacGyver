@@ -49,7 +49,7 @@ class Start:
             self.structure[j][i] = 'p'
 
     def show(self, window):
-        """Method to display the level according to
+        """Method to display the game according to
         of the structure list returned by generate ()"""
 
         # Loading images (only the arrival one contains transparency)
